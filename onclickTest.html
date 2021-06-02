@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz (onclick test)</title>
+    <style>
+        body{
+            text-align: center;
+        }
+
+        h2{
+            border:solid grey 3px;
+            width:fit-content;
+            padding:5px;
+            background-color: lightgray;
+            margin: 7px auto 7px auto;
+        
+        }
+    </style>
+</head>
+<body>
+    <h1>Which ability score is tied to your HP?</h1>
+    <h2 onclick="incorrect()" id="str">Strength</h2>
+    <h2 onclick="incorrect()" id="dex">Dexterity</h2>
+    <h2 onclick="correct()" id="con">Constitution</h2>
+    <h2 onclick="incorrect()" id="int">Intelligence</h2>
+    <h2 onclick="incorrect()" id="wis">Wisdom</h2>
+    <h2 onclick="incorrect()" id="cha">Charisma</h2>
+    <p id="result">
+
+    </p>
+
+    <script>
+        function correct() {
+            document.getElementById('result').innerHTML = 'Correct! A higher CON bonus means more HP.';
+        }
+        function incorrect() {
+            document.getElementById('result').innerHTML = '*bzzzt* Incorrect, try again!';
+        }
+    </script>
+</body>
+</html>
