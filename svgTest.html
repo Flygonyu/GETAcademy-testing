@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG test</title>
+</head>
+<body>
+    <svg width="1000" height="2000">
+        <circle cx="200" cy="100" r="70" stroke="grey" stroke-width="7" fill="green" />
+        <rect x="50" y="150" rx="20" ry="10" width="300" height="100" 
+        style="fill:green;stroke-width:6;stroke:grey;fill-opacity:0.5;stroke-opacity:0.5" />
+        <ellipse cx="200" cy="320" rx="100" ry="60"
+        style="fill:green;stroke:grey;stroke-width:5" />
+        <ellipse cx="200" cy="380" rx="110" ry="40" style="fill:lime" />
+        <ellipse cx="200" cy="430" rx="140" ry="30" style="fill:rgb(124, 86, 150)" />
+        <ellipse cx="220" cy="430" rx="110" ry="20" style="fill:greenyellow" />
+        <line x1="330" y1="50" x2="430" y2="300" style="stroke:purple;stroke-width:4" />
+        <polygon points="400,30 500,100 450,300" style="fill:greenyellow;stroke:grey;stroke-width: 4;" />
+        <polygon points="550,20 650,150 600,300 540,250" style="fill:indigo;stroke: rgb(107, 107, 107);stroke-dasharray:5,5,10,5,20; stroke-width: 5;" />
+        <polygon points="480,310 420,498 570,378 390,378 540,498"
+        style="fill:limegreen;stroke: mediumpurple;stroke-width: 5;fill-rule: nonzero;"/>
+        <polygon points="680,310 620,498 770,378 590,378 740,498"
+        style="fill:rgb(120, 205, 50);stroke: rgb(152, 98, 163);stroke-width: 5;fill-rule: evenodd;"/>
+        <polyline points="600,30 640,25 750,100 690,150 720,250 740,170"
+        style="fill:none; stroke:purple;stroke-width: 5;" />
+        <polyline points="50,500 100,500 100,550 150,550 150,600 200,600 200,650"
+        style="fill:none;stroke:skyblue;stroke-width:5" />
+        <path d="M330 550 L300 600 L400 600 Z" />
+
+        <path id="lineAB" d="M 100 900 l 150 -300" stroke="red" stroke-width="3" fill="none" />
+        <path id="lineBC" d="M 250 600 l 150 300" stroke="red" stroke-width="3" fill="none" />
+        <path d="M 175 750 l 150 0" stroke="green" stroke-width="3" fill="none" />
+        <path d="M 100 900 q 150 -300 300 0" stroke="blue" stroke-width="5" fill="none" />
+  <!-- Mark relevant points -->
+        <g stroke="black" stroke-width="3" fill="black">
+        <circle id="pointA" cx="100" cy="900" r="3" />
+        <circle id="pointB" cx="250" cy="600" r="3" />
+        <circle id="pointC" cx="400" cy="900" r="3" />
+        </g>
+    <!-- Label the points -->
+        <g font-size="30" font-family="sans-serif" fill="black" stroke="none" text-anchor="middle">
+        <text x="100" y="900" dx="-30">A</text>
+        <text x="250" y="600" dy="-10">B</text>
+        <text x="400" y="900" dx="30">C</text>
+        </g>
+<!-- target="_blank" to open link in new tab -->
+        <a xlink:href="https://ddb.ac/characters/29696077/744Zrw" target="_blank">
+        <text x="450" y="550" fill="green" transform="rotate(30 200,400)"> Butts</text>
+        </a>
+        <text x="420" y="550" fill="purple">Testing
+            <tspan x="420" y="575">Hello</tspan>
+            <tspan x="420" y="600">Okay bye</tspan>
+        </text>
+    </svg>
+
+</body>
+</html>
