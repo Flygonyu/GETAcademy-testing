@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kodelås</title>
+    <style>
+        div{
+            margin-top:10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="butt1" onclick="click1()">1</button>
+    <button onclick="click2()">2</button>
+    <button onclick="click3()">3</button>
+    <br><button onclick="click4()">4</button>
+    <button onclick="click5()">5</button>
+    <button onclick="click6()">6</button>
+    <br><button onclick="click7()">7</button>
+    <button onclick="click8()">8</button>
+    <button onclick="click9()">9</button>
+
+    <div id=insert>
+      Insert code:
+    </div>
+    
+    <script>
+
+        var butt1
+        var butt2
+
+        function click1() {
+            document.getElementById('insert').innerHTML += document.getElementById('butt1').innerHTML;
+        }
+        function click2() {
+            document.getElementById('insert').innerHTML += '2';
+        }
+        function click3() {
+            document.getElementById('insert').innerHTML += '3';
+        }
+        function click4() {
+            document.getElementById('insert').innerHTML += '4';
+        }
+        function click5() {
+            document.getElementById('insert').innerHTML += '5';
+        }
+        function click6() {
+            document.getElementById('insert').innerHTML += '6';
+        }
+        function click7() {
+            document.getElementById('insert').innerHTML += '7';
+        }
+        function click8() {
+            document.getElementById('insert').innerHTML += '8';
+        }
+        function click9() {
+            document.getElementById('insert').innerHTML += '9';
+        }
+    </script>
+</body>
+</html>
