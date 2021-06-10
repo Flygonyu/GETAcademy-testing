@@ -9,25 +9,25 @@
         body{
             text-align: center;
         }
-
-        h2{
-            border:solid grey 3px;
+        button{
+            /* border:solid grey 3px; */
+            font-size: larger;
             width:fit-content;
             padding:5px;
             background-color: lightgray;
             margin: 7px auto 7px auto;
-        
         }
+
     </style>
 </head>
 <body>
     <h1>Which ability score is tied to your HP?</h1>
-    <h2 onclick="incorrect()" id="str">Strength</h2>
-    <h2 onclick="incorrect()" id="dex">Dexterity</h2>
-    <h2 onclick="correct()" id="con">Constitution</h2>
-    <h2 onclick="incorrect()" id="int">Intelligence</h2>
-    <h2 onclick="incorrect()" id="wis">Wisdom</h2>
-    <h2 onclick="incorrect()" id="cha">Charisma</h2>
+    <button onclick="incorrect()" id="str">Strength</button>
+    <br><button onclick="incorrect()" id="dex">Dexterity</button>
+    <br><button onclick="correct()" id="con">Constitution</button>
+    <br><button onclick="incorrect()" id="int">Intelligence</button>
+    <br><button onclick="incorrect()" id="wis">Wisdom</button>
+    <br><button onclick="incorrect()" id="cha">Charisma</button>
     <p id="result">
 
     </p>
