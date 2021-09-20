@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+<style>
+    #square{
+        border: black solid 2px;
+        background-color: aquamarine;
+    }
+</style>
+</head>
+<body>
+    <p>Ferdighet 7 - Sette variabel til resultat av et regnestykke. </p>
+    <input id="width" type="range" min="1" max="1000" step="1" oninput="calculate()" value="100" />
+    <input id="height" type="range" min="1" max="1000" step="1" oninput="calculate()" value="100" />
+    <div id="result"></div>
+
+    <script>
+        var resultDiv = document.getElementById('result');
+        var widthInput = document.getElementById('width');
+        var heightInput = document.getElementById('height');
+
+        calculate();
+
+        function calculate() {
+            var width = parseInt(widthInput.value);
+            var height = parseInt(heightInput.value);
+            var perimeter = 2*width + 2*height;
+            var area = width * height;
+
+            resultDiv.innerHTML = '' + '<div>' + 'Width: ' + widthInput.value + 'px' 
+                + '<br>Height: ' + heightInput.value + 'px' +
+                '<br>Area (width * height): ' + area + 'px <br>Perimeter (2*width + 2*height): ' 
+                + perimeter + 'px </div>'
+                
+                + '<div id="square" style=" ' + 'height: ' + heightInput.value + 'px ;' + 
+                'width: ' + widthInput.value + 'px">' + '</div>'
+                
+        }
+    </script>
+</body>
+</html>
