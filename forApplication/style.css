@@ -1,0 +1,49 @@
+
+body{
+    margin: 0;
+    background-color: rgb(224, 247, 242);
+}
+
+#nav{
+    background-color: aquamarine;
+    height: 52px;
+}
+
+button {
+    background-color: aquamarine;
+    border: none;
+    line-height: 50px;
+    font-family:fantasy;
+    font-size: large;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition-duration: 0.4s;
+    color:rgb(44, 82, 68)
+}
+
+button:hover{
+    background-color: rgb(99, 194, 162);
+    
+}
+
+.clicked{
+    background-color: rgb(115, 224, 188);
+}
+
+a{
+    color:blueviolet;
+    font-family:sans-serif;
+    
+}
+
+a:hover{
+    color: rgb(99, 30, 163);
+}
+
+#welcome{
+    color: cornsilk;
+    font-size: x-large;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 30px;
+    margin-right:30px;
+}
