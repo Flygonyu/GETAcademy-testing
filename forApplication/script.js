@@ -10,7 +10,7 @@ var contentDiv = document.getElementById('app');
     // showAbout();
 
     function show() {
-        navBar.innerHTML = `<text id="welcome">Welcome!</text>
+        navBar.innerHTML = `<text id="name">Vanja S. C.</text>
         <button class="" onclick="exercises()">Exercises</button>
         <button class="" onclick="team()">Team Projects</button>
         <button class="" onclick="about()">About Me</button> 
@@ -18,13 +18,13 @@ var contentDiv = document.getElementById('app');
         `
         
         contentDiv.innerHTML = `
-        
+        <h1 id="welcome">Welcome!</h1>
         
         `
     }
 
     function showExercises() {
-        navBar.innerHTML = `<text id="welcome">Welcome!</text>
+        navBar.innerHTML = `<text id="name">Vanja S. C.</text>
         <button class="clicked" onclick="exercises()">Exercises</button>
         <button class="" onclick="team()">Team Projects</button>
         <button class="" onclick="about()">About Me</button> 
@@ -49,7 +49,7 @@ var contentDiv = document.getElementById('app');
     }
 
     function showTeam() {
-        navBar.innerHTML = `<text id="welcome">Welcome!</text>
+        navBar.innerHTML = `<text id="name">Vanja S. C.</text>
         <button class="" onclick="exercises()">Exercises</button>
         <button class="clicked" onclick="team()">Team Projects</button>
         <button class="" onclick="about()">About Me</button> 
@@ -68,7 +68,7 @@ var contentDiv = document.getElementById('app');
     }
 
     function showAbout() {
-        navBar.innerHTML = `<text id="welcome">Welcome!</text>
+        navBar.innerHTML = `<text id="name">Vanja S. C.</text>
         <button class="" onclick="exercises()">Exercises</button>
         <button class="" onclick="team()">Team Projects</button>
         <button class="clicked" onclick="about()">About Me</button> 
