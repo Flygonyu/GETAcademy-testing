@@ -7,7 +7,7 @@ var contentDiv = document.getElementById('app');
 
     //view
     show();
-    showAbout();
+    // showAbout();
 
     function show() {
         navBar.innerHTML = `<text id="welcome">Welcome!</text>
@@ -33,12 +33,12 @@ var contentDiv = document.getElementById('app');
         contentDiv.innerHTML = `
         <h2>Here are some exercises I've done in module 1:</h2>
         <div id="exer">
-        <br><a href="https://flygonyu.github.io/GETAcademy-testing/onclickTest.html" target="_blank">My first onclick test!</a>
-        <br> <a href="https://flygonyu.github.io/GETAcademy-testing/dynamiskHTMLferdighet6.html" target="_blank">Dynamic HTML</a>
-        <br> <a href="https://flygonyu.github.io/GETAcademy-testing/variabelRegnestykke_ferdighet7.html" target="_blank">Math-y Variables</a>
-        <br> <a href="https://flygonyu.github.io/GETAcademy-testing/kodel%C3%A5s.html" target="_blank">Pin Code (wip)</a>
-        <br> <a href="https://flygonyu.github.io/GETAcademy-testing/ludo.html" target="_blank">SVG Ludo</a>
-        <br> <a href="https://flygonyu.github.io/Oblig_modul1/Oblig_modul1_VanjaSC.html" target="_blank">Obligatory Exercise</a>
+        <br><a href="https://flygonyu.github.io/GETAcademy-testing/onclickTest.html" target="_blank">- My first onclick test!</a>
+        <br> <a href="https://flygonyu.github.io/GETAcademy-testing/dynamiskHTMLferdighet6.html" target="_blank">- Dynamic HTML</a>
+        <br> <a href="https://flygonyu.github.io/GETAcademy-testing/variabelRegnestykke_ferdighet7.html" target="_blank">- Math-y Variables</a>
+        <br> <a href="https://flygonyu.github.io/GETAcademy-testing/kodel%C3%A5s.html" target="_blank">- Pin Code (wip)</a>
+        <br> <a href="https://flygonyu.github.io/GETAcademy-testing/ludo.html" target="_blank">- SVG Ludo</a>
+        <br> <a href="https://flygonyu.github.io/Oblig_modul1/Oblig_modul1_VanjaSC.html" target="_blank">- Obligatory Exercise</a>
         <br> <a href="" target="_blank">Placeholder</a>
         <br> <a href="" target="_blank">Placeholder</a>
         <br> <a href="" target="_blank">Placeholder</a>
@@ -79,11 +79,13 @@ var contentDiv = document.getElementById('app');
         <h2 class="header">Hello! I'm Vanja.</h2> 
         <div class="intro" id="bio">
         <p>I'm 25, and I live in Sandefjord, Norway.</p>
-        My hobbies include reading, gaming, and Dungeons & Dragons.
+        My hobbies include reading, gaming, board games and Dungeons & Dragons.
         </div>
-        <img id="me" class="picture" src="profilepic.jpg">
+        <div class="picture"><img id="me" src="profilepic.jpg"></div>
         <div class="game"><h3>Gaming</h3>
-        I mostly play indie games and RPGs. I love getting all achievements in games, and I'll spend hours making sure I've completed everything. I love lists, and I'll sometimes plan my playthroughs beforehand, trying to find a way I can complete everything faster.</div>
+        <p>I mostly play indie games and RPGs. I love getting all achievements in games, and I'll spend hours making sure I've completed everything!
+        I love lists, and I'll sometimes plan my playthroughs beforehand, trying to find a way I can complete everything faster.</p>
+        <p>I play on PC, PlayStation and Nintendo devices.</p></div>
         </div>
         `
     }
