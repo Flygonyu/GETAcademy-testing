@@ -12,6 +12,7 @@ body{
 
 #app{
     margin: 30px;
+    
 }
 
 button {
@@ -53,4 +54,5 @@ a:hover{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin-left: 30px;
     margin-right:30px;
+    font-style:oblique;
 }
