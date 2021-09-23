@@ -1,3 +1,15 @@
+body::-webkit-scrollbar {
+    width: 0.7rem;
+    height: 0.7rem;
+}
+
+body ::-webkit-scrollbar-track {
+    background: rgb(46, 87, 90);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgb(21, 187, 146);
+}
 
 body{
     margin: 0;
@@ -9,7 +21,8 @@ body{
     height: 52px;
     border-bottom:rgb(145, 212, 205) solid 2px;
     min-width: 700px;
-    
+    width: 100vw;
+
 }
 
 #app{
@@ -17,7 +30,7 @@ body{
     font-family: Dekko;
     text-align: center;
     min-width: 1200px;
-    
+
 }
 
 button {
@@ -35,7 +48,7 @@ button {
 button:hover{
     background-color: rgba(99, 194, 162, 0.822);
     border-radius: 10px;
-    
+
 }
 
 .clicked{
@@ -48,7 +61,7 @@ a{
     font-family: Architects Daughter;
     text-decoration: none;
     font-size:large;
-    
+
 }
 
 a:hover{
@@ -75,6 +88,7 @@ a:hover{
     width: 50px;
     float: right;
     margin-right: 20px;
+    padding-top:2px;
 }
 
 #exer{
@@ -96,15 +110,15 @@ h2{
 
 #aboutWrapper{
     display: grid;
-    width: 100vw;
-    height: 100vh;
-    grid-template-columns: 1fr 1fr 10px 1fr 1fr;
-    grid-template-rows: 100px 200px 2fr;
+    
+    /* height: 100vh; */
+    grid-template-columns: 20% 20% 10px 15% 20%;
+    grid-template-rows: 100px 200px 50vh;
     grid-template-areas: "header header . picture picture"
                          "intro intro . . ."
                          "intro intro .. game game"
                          ;
-    
+
 }
 
 .header{
