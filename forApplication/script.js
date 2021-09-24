@@ -7,7 +7,6 @@ var contentDiv = document.getElementById('app');
 
     //view
     show();
-    // showAbout();
 
     function show() {
         navBar.innerHTML = `<text id="name">Vanja S. C.</text>
@@ -33,19 +32,16 @@ var contentDiv = document.getElementById('app');
         contentDiv.innerHTML = `
         <h2>Here are some exercises I've done in module 1:</h2>
         <div id="exer">
-        <br><a href="https://flygonyu.github.io/GETAcademy-testing/onclickTest.html" target="_blank">- My first onclick test!</a>
-        <br> <a href="https://flygonyu.github.io/GETAcademy-testing/dynamiskHTMLferdighet6.html" target="_blank">- Dynamic HTML</a>
-        <br> <a href="https://flygonyu.github.io/GETAcademy-testing/variabelRegnestykke_ferdighet7.html" target="_blank">- Math-y Variables</a>
-        <br> <a href="https://flygonyu.github.io/GETAcademy-testing/kodel%C3%A5s.html" target="_blank">- Pin Code (wip)</a>
-        <br> <a href="https://flygonyu.github.io/GETAcademy-testing/ludo.html" target="_blank">- SVG Ludo</a>
-        <br> <a href="https://flygonyu.github.io/Oblig_modul1/Oblig_modul1_VanjaSC.html" target="_blank">- Obligatory Exercise</a>
-        <br> <a href="" target="_blank">Placeholder</a>
-        <br> <a href="" target="_blank">Placeholder</a>
-        <br> <a href="" target="_blank">Placeholder</a>
-        <br> <a href="" target="_blank">Placeholder</a>
+        <br><a href="https://flygonyu.github.io/GETAcademy-testing/onclickTest.html" target="_blank">My first onclick test!</a>
+        <br> <a href="https://flygonyu.github.io/GETAcademy-testing/dynamiskHTMLferdighet6.html" target="_blank">Dynamic HTML</a>
+        <br> <a href="https://flygonyu.github.io/GETAcademy-testing/variabelRegnestykke_ferdighet7.html" target="_blank">Math-y Variables</a>
+        <br> <a href="https://flygonyu.github.io/GETAcademy-testing/kodel%C3%A5s.html" target="_blank">Pin Code (WIP)</a>
+        <br> <a href="https://flygonyu.github.io/GETAcademy-testing/ludo.html" target="_blank">SVG Ludo board</a>
+        <br> <a href="https://flygonyu.github.io/Oblig_modul1/Oblig_modul1_VanjaSC.html" target="_blank">Obligatory Exercise</a>
+        
         </div>
         `
-        
+        //<br> <a href="" target="_blank">Placeholder</a>
     }
 
     function showTeam() {
@@ -63,6 +59,7 @@ var contentDiv = document.getElementById('app');
         <br> <a href="https://flygonyu.github.io/historie-team2/index.html" target="_blank">Wordchooser Story</a>
         <br> <a href="https://flygonyu.github.io/SteinSaksPapir_team2/index.html" target="_blank">Rock-Paper-Scissors</a>
         <br> <a href="https://flygonyu.github.io/morsecode/index.html" target="_blank">Morse Code Translator</a>
+        <br> <a href="https://flygonyu.github.io/FightingGame/index.html" target="_blank">Fighting Game (WIP)</a>
         </div>
         `
     }
@@ -79,13 +76,24 @@ var contentDiv = document.getElementById('app');
         <h2 class="header">Hello! I'm Vanja.</h2> 
         <div class="intro" id="bio">
         <p>I'm 25, and I live in Sandefjord, Norway.</p>
-        My hobbies include reading, gaming, board games and Dungeons & Dragons.
+        <p>My hobbies include reading, gaming, board games and Dungeons & Dragons.</p>
+        <p class="blurb">I've wanted to learn coding for a while, but the thought of "not being good enough" held me back. 
+        <br>I'm so glad I decided to try 
+        <br>anyway, because it's been 
+        <br>amazing so far! The problem 
+        <br>solving, the frustrations, the 
+        <br>teamwork, the feeling of accomplishment when 
+        <br>everything falls into place - 
+        <br>it's been so much fun.</p>
+        <p class="blurb">I can't wait to see what the 
+        <br>future brings :)</p>
         </div>
         <div class="picture"><img id="me" src="profilepic.jpg"></div>
         <div class="game"><h3>Gaming</h3>
-        <p>I mostly play indie games and RPGs. I love getting all achievements in games, and I'll spend hours making sure I've completed everything!
+        <p>I mostly play indie games and RPGs. I love getting every achievement in games, and I'll spend hours making sure I've completed everything!
         I love lists, and I'll sometimes plan my playthroughs beforehand, trying to find a way I can complete everything faster.</p>
-        <p>I play on PC, PlayStation and Nintendo devices.</p></div>
+        <p>I play on PC, PlayStation and Nintendo devices.</p>
+        <p>I would love to work in game development at some point!</div>
         </div>
         `
     }
