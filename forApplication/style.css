@@ -196,7 +196,7 @@ h2{
         color: cornsilk;
         font-size: x-large;
         font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        margin-left:30vw;
+        margin-left: 25vw;
         font-style:oblique;
         position: fixed;
     }
@@ -213,10 +213,10 @@ h2{
         border-bottom:rgb(145, 212, 205) solid 2px;
         width:100vw;
         min-width: 300px;
-        max-width: 450px;
-        padding-left: 10%;
+        max-width: 500px;
         padding-top:10px;
         transition-duration: 0.4s;
+        text-align: center;
     }
 
     #app{
@@ -240,7 +240,5 @@ h2{
         transition-duration: 0.4s;
         color:rgb(44, 82, 68);
         margin-top: 40px;
-        margin-left: 5%;
-        position: relative;
     }
 }
