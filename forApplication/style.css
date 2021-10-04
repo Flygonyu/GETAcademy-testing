@@ -191,19 +191,20 @@ h2{
     #gitLogo{
         width: 40px;
         float: right;
+        position: fixed;
     }
     #name{
         color: cornsilk;
         font-size: x-large;
         font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        margin-left: 25vw;
+        margin-left: 20vw;
         font-style:oblique;
         position: fixed;
     }
 
     #welcome{
         color: rgb(102, 146, 121);
-        font-size: 500%;
+        font-size: 450%;
         font-family: Indie Flower;
         margin:auto;
     }
