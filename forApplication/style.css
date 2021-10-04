@@ -234,7 +234,7 @@ h2{
         border: none;
         line-height: 50px;
         font-family:Boogaloo;
-        font-size: larger;
+        font-size: 100%;
         padding-left: 15px;
         padding-right: 15px;
         transition-duration: 0.4s;
