@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link href='https://fonts.googleapis.com/css?family=Architects Daughter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Gluten' rel='stylesheet'>
+
+<style>
+body{
+    background: rgb(144,211,233);
+    background: radial-gradient(circle, rgba(144,211,233,1) 0%, rgba(122,89,198,1) 100%);
+    height:85vh;
+    margin-top: 100px;
+}
+
+h1{
+    margin:100px;
+}
+
+*{
+    text-align: center;
+    font-family: Gluten;
+}
+
+.hidden{
+    display: none;
+}
+
+button{
+    margin:5px;
+    transition-duration: 0.4s;
+    font-size: larger;
+    font-family: Architects Daughter;
+}
+
+button:hover{
+    opacity: 70%;
+}
+
+.wrong{
+    background-color: tomato;
+}
+
+.correct{
+    background-color: yellowgreen;
+    color: black;
+}
+
+#result{
+    margin:20px;
+    font-style:italic;
+}
+
+</style>
+</head>
+
+
+<body>
+    <div id="app"></div>
+
+<script>
+    //model
+    let result = ''
+    let hidden = 'hidden'
+    let hiddenC = 'hidden'
+    let disable = ''
+    let chosen = ''
+    let corrects = '0'
+    let incorrects = '0'
+    let correct = ''
+
+    //view
+    show()
+    function show(){
+        document.getElementById('app').innerHTML = `
+        <h1>D&D Quiz</h1>
+        <button onclick="showQ1()"> Ready? </button>
+        `
+    }
+
+    //q1
+    function showQ1(){
+        document.getElementById('app').innerHTML = `
+        <h2>Question one</h2>
+        <p>Which ability score is connected to your HP?</p>
+        <button onclick="answer1(this)" ${disable}>Strength</button>
+        <button onclick="answer1(this)" ${disable}>Dexterity</button>
+        <button onclick="answer1(this)" class="${correct}" ${disable}>Constitution</button><br>
+        <button onclick="answer1(this)" ${disable}>Intelligence</button>
+        <button onclick="answer1(this)" ${disable}>Wisdom</button>
+        <button onclick="answer1(this)" ${disable}>Charisma</button>
+        <div id="result">${result}</div>
+        <button class="${hidden}" onclick="next1()">next question</button>
+        <div id="counter" class="${hiddenC}">correct answers: ${corrects}<br>Incorrect answers: ${incorrects}</div>
+        `
+    }
+
+    //q2
+    function showQ2(){
+        document.getElementById('app').innerHTML = `
+        <h2>Question two</h2>
+        <p>Hey, cleric! Your friend is poisoned! Which spell do you use?</p>
+        <button onclick="answer2(this)" class="${correct}" ${disable}>Lesser Restoration</button>
+        <button onclick="answer2(this)" ${disable}>Healing Word</button><br>
+        <button onclick="answer2(this)" ${disable}>Cure Wounds</button>
+        <button onclick="answer2(this)" ${disable}>Ray of Sickness</button>
+        <div id="result">${result}</div>
+        <button class="${hidden} onclick="next2()">next question</button>
+        <div id="counter" class="${hiddenC}">correct answers: ${corrects}<br>incorrect answers: ${incorrects}</div>
+        `
+    }
+
+    //q3
+    function showQ3(){
+        document.getElementById('app').innerHTML = `
+        <h2>Question three</h2>
+        <p>Your druid has 18 wisdom. What is their WIS bonus?</p>
+        <button onclick="answer3(this)" ${disable}>8</button><br>
+        <button onclick="answer3(this)" ${disable}>18</button>
+        <button onclick="answer3(this)" ${disable}>2</button>
+        <button onclick="answer3(this)" class="${correct}" ${disable}>4</button>
+        <div id="result">${result}</div>
+        <button class="${hidden} onclick="next3()">next question</button>
+        <div id="counter" class="${hiddenC}">correct answers: ${corrects}<br>incorrect answers: ${incorrects}</div>
+        `
+
+    }
+
+    //controller
+    function answer1(x){
+        chosen = x.innerHTML;
+        hiddenC = ''
+        if (chosen == 'Constitution'){
+        result = 'Correct! A higher CON bonus means more HP!<br>';
+        hidden = '';
+        disable = 'disabled';
+        corrects ++
+        correct = 'correct'
+        }
+        else {
+        result = '*bzzt* Wrong answer! Try again';
+        incorrects ++
+        }
+        showQ1()
+    }
+    function next1(){
+        hidden = 'hidden'
+        disable = ''
+        result = ''
+        correct = ''
+        showQ2()
+    }
+
+    function answer2(x){
+        chosen = x.innerHTML;
+        if (chosen == 'Lesser Restoration'){
+        result = 'Correct! Lesser Restoration can heal several conditions, including poisoned.<br>';
+        hidden = '';
+        disable = 'disabled';
+        corrects ++
+        correct = 'correct'
+        }
+        else if (chosen == 'Ray of Sickness'){
+            result = 'I.. what. No. Why would you-<br>Just.. try again.'
+            incorrects ++
+        }
+        else {
+        result = '*bzzt* Wrong answer! Try again';
+        incorrects ++
+        }
+        showQ2();
+    }
+
+    function next2(){
+        hidden = 'hidden'
+        disable = ''
+        result = ''
+        correct = ''
+        showQ3()
+    }
+
+    function answer3(x){
+        chosen = x.innerHTML;
+        if (chosen == '4'){
+        result = 'Correct! <br>';
+        hidden = '';
+        disable = 'disabled';
+        corrects ++
+        correct = 'correct'
+        }
+        else {
+        result = '*bzzt* Wrong answer! Try again';
+        incorrects ++
+        }
+        showQ3()
+    }
+
+</script>
+</body>
+</html>
+
+<!-- correct/incorrect counter? -->
+<!-- question array? -->

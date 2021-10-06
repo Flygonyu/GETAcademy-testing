@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Lock</title>
+    <link href='https://fonts.googleapis.com/css?family=Averia Libre' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Electrolize' rel='stylesheet'>
+<style>
+*{
+    text-align: center;
+}
+
+body{
+    margin-top: 100px;
+    background-color:whitesmoke;
+}
+
+#safe{
+    /* background: rgb(50,50,50);
+background: linear-gradient(317deg, rgba(50,50,50,1) 0%, rgba(177,177,177,1) 100%); */
+    background: rgb(50,50,50);
+    background: linear-gradient(132deg, rgba(50,50,50,1) 0%, rgba(177,177,177,1) 100%);
+    width:400px;
+    height:500px;
+    margin: auto;
+    padding-top: 80px;
+    box-sizing: border-box;
+    border: outset 10px rgb(94, 94, 94);
+}
+
+h3{
+    font-family: Electrolize;
+}
+
+#input{
+    margin: auto;
+    width: 150px;
+    height: 30px;
+    border: rgb(119, 118, 118) inset 3px;
+    line-height: 30px;
+    background-color: rgb(197, 197, 197);
+    font-family: Electrolize;
+}
+
+button{
+    font-size: larger;
+    font-family: Averia Libre;
+    width: 30px;
+    border: outset 2px rgb(119, 118, 118);
+    transition-duration: 0.2s;
+    background-color: rgb(99, 99, 99);
+    margin:2px;
+}
+
+#reset:hover{
+    opacity: 1;
+}
+
+#open:hover{
+    opacity: 1;
+}
+
+button:hover{
+    opacity: 0.6;
+}
+
+#reset{
+    font-size: small;
+    margin: 10px;
+    margin-bottom:40px;
+    width: 50px;
+    background-color: rgb(133, 133, 133);
+}
+
+#open{
+    width:100px;
+    margin-top: 35px;
+    background-color: rgb(122, 122, 122);
+    border-width: 3px;
+}
+
+</style>
+</head>
+
+<body>
+    <div id="app"></div>
+</body>
+    
+<script>
+//model
+let pin = ''
+let disable = 'disabled'
+
+//view     //svg of safe?
+show()
+function show(){
+    let appDiv =  document.getElementById('app');
+    appDiv.innerHTML = `
+    <div id="safe">
+    <h3>Insert code:</h3>
+    <div id="input">${pin}</div><button id="reset" onclick="reset()" ${disable}>reset</button><br>
+    <button onclick="beep(this)">1</button><button onclick="beep(this)">2</button><button onclick="beep(this)">3</button><br>
+    <button onclick="beep(this)">4</button><button onclick="beep(this)">5</button><button onclick="beep(this)">6</button><br>
+    <button onclick="beep(this)">7</button><button onclick="beep(this)">8</button><button onclick="beep(this)">9</button><br>
+    <button onclick="beep(this)">0</button>
+    <br><button id="open" onclick="open()"> OPEN </button> 
+    </div>`;
+}
+
+//controller
+function beep(x){
+    pin += ' ' + x.innerHTML;
+    disable = '';
+    show();
+}
+
+
+function reset(){
+    pin = '';
+    disable = 'disabled';
+    show();
+}
+
+function open(){
+    pin = 'incorrect code';
+    show();
+}
+
+</script>
+</body>
+</html>

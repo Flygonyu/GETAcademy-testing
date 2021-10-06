@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic HTML test</title>
+
+<style>
+    *{
+        text-align: center;
+    }
+
+    #result{
+        margin:auto;
+        margin-top:100px;
+        box-sizing: border-box;
+    }
+        
+    
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="result"></div>
+<script>
+let appDiv = document.getElementById('app')
+let resultDiv = document.getElementById('result')
+
+    //model
+    let wh = 250;
+    let radius = 0;
+    let colour = 'green'
+    let border = 'black'
+    let opacity = 100
+    let text = ''
+
+    //view
+    show()
+    function show(){
+        appDiv.innerHTML = `
+        Change the size: <input id="sizeSlider" onchange="change(this.value), wh = this.value" type="range" value="${wh}" min="100" max="500" step="10"/><div>${wh}px</div>
+        <br>Change the radius: <input id="radiusSlider" oninput="radius=this.value" type="range" value="${radius}" min="0" max="100"/><div>${radius}px</div>
+        <br><input id="textInput" type="text" onchange="text=this.value, change()" placeholder="Write something!"/>
+    <select id="colourChooser" onchange="colour=this.value">
+        <option value="lime">Lime colour</option>
+        <option selected value="green">Green colour</option>
+        <option value="purple">Purple colour</option>
+    </select>
+    <select id="borderColours" onchange="border=this.value">
+        <option selected value="black">Black border</option>
+        <option value="gray">Gray border</option>
+        <option value="white">No border</option>
+    </select>
+    Opacity: <input id="opacitySlider" oninput="opacity=this.value" type="range" value="100" min="0" max="100"/><br>
+ 
+    `
+        resultDiv.innerHTML = `<div id="result" style="
+        background-color: ${colour};
+        width: ${wh}px;
+        height: ${wh}px;
+        border: ${border} 10px solid;
+        border-radius: ${radius}px;
+        opacity: ${opacity}%;
+        ">
+        <p style="">${text}</p>
+        </div>
+        `   
+        console.log(wh)
+    }
+    
+    //controller
+    function change(value){
+        wh = value;
+        show()
+    }
+</script>
+</body>
+</html>
