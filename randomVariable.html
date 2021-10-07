@@ -4,6 +4,33 @@
 <head>
     <meta charset="utf-8" />
     <title>Random Variables</title>
+    <link href='https://fonts.googleapis.com/css?family=Bubblegum Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Coming Soon' rel='stylesheet'>
+
+<style>
+    body{
+        margin:40px;
+        text-align:center;
+        background-color:rgb(217, 247, 222);
+        font-family: Coming Soon;
+    }
+    #square{
+        background-color:rgb(195, 221, 255);
+        border-color: rgb(137, 116, 230);
+        border-style: groove;
+        margin:auto;
+    }
+
+    button{
+        margin-bottom:10px;
+        font-family: Bubblegum Sans;
+        font-size: larger;
+    }
+
+    #info{
+        margin-bottom: 20px;
+    }
+</style>
 </head>
 <body>
     <div id="app"></div>
@@ -11,16 +38,35 @@
     <script>
         let appDiv = document.getElementById('app')
         //model
+        let width = ''
+        let height = ''
+        let borderWidth = ''
 
         //view
+        randomize()
         show()
         function show(){
             appDiv.innerHTML = `
-            
+            <button onclick="randomize()"> Randomize </button>
+            <div id="info"><br>Current:
+            <br>Width: ${width}px
+            <br>Height: ${height}px
+            <br>Border-width: ${borderWidth}px</div>
+            <div id="square" style="
+            width:${width}px;
+            height:${height}px;
+            border-width: ${borderWidth}px;
+            "></div>
             `
         }
 
         //controller
+        function randomize(){
+            width = Math.ceil(Math.random() * 500);
+            height = Math.ceil(Math.random() * 500);
+            borderWidth = Math.ceil(Math.random() * 30);
+            show()
+        }
 
 
 

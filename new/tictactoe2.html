@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+
+<style>
+    body{
+        background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/53554260151341.5a3e34830d41b.jpg);
+    }
+
+    .wrapper{
+        display:grid;
+        width:fit-content;
+        grid-template-columns: 200px 200px 200px;
+        grid-template-rows: 200px 200px 200px;
+        border: rgb(71, 47, 41) 10px outset;
+        float: left;
+    }
+
+    .cell{
+        border: rgb(71, 47, 41) 3px groove;
+        background-color: darkolivegreen; 
+        text-align: center;  
+        line-height: 200px; 
+        font-size: xx-large;
+    }
+
+    #result{
+        box-sizing: border-box;
+        margin:50px 0px 0px 50px;
+        background-color: rgb(148, 118, 101);
+        width: 400px;
+        height: 500px;
+        float:left;
+        border: rgb(71, 47, 41) 10px groove;
+        padding:20px;
+    }
+
+    #reset{
+        margin:10px;
+    }
+</style>
+</head>
+<body>
+    <div id="app"></div>
+
+<script>
+let appDiv = document.getElementById('app')
+    //model
+
+    //view
+    show()
+    function show(){
+        appDiv.innerHTML =`
+        <div class="wrapper">
+            <div class="cell">1</div> <div class="cell">2</div> <div class="cell">2</div>
+            <div class="cell">4</div> <div class="cell">5</div> <div class="cell">6</div>
+            <div class="cell">7</div> <div class="cell">8</div> <div class="cell">9</div>
+        </div>
+        <div id="result">Player 1 wins:
+            <br>Player 2 wins:
+            <br><button id="reset">Reset board</button></div>
+        `
+    }
+
+    //controller
+</script>
+</body>
+</html>
+
+<!-- Første teamoppgave: Rutenett!
+Lag et 2x2 rutenett ved hjelp av DIVs, HTML og CSS - hvor rutene er like store.
+Unngå å bruke <br> tags etc for linjebytte - bruk CSS i seg selv eller CSS grid :slight_smile:
+
+Velg selv hva dere legger inne i rutene; farger, bilder eller noe helt annet.
+Gå sammen i teamene deres - planlegg og jobb sammen for å finne en løsning.
+Blir dere tidlig ferdig, så bruk resten av TP øktene til å slippe kreativiteten løs og "jazze opp" oppgaven 
+
+Vi viser fram resultatene via skjermdeling i General neste tirsdag samme tid
+Gleder meg til å se resultatene!
+Hint:
+Float
+Clear -->

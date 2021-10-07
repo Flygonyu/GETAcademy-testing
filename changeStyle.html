@@ -5,55 +5,191 @@
     <meta charset="utf-8" />
     <title></title>
     <style>
-        .round {
-            border: 1px solid gray;
-            border-radius: 5px;
+        body{
+            text-align: center;
+        }
+
+        #result{
+            margin:auto;
+            width: 300px;
+            height: 300px;
+            line-height: 250px;
+        }
+
+        input{
+            margin:50px 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+
+<script>
+    let appDiv = document.getElementById('app')
+        
+        //model
+        let colour = 'teal'
+        let border = '10px solid black'
+        let text = 'Hello!'
+        let textColour = 'black'
+        let shape = '0'
+        let checked = ''
+        let checked2;
+        let checked3;
+        let checked4;
+        let checked5;
+
+        //view
+        show()
+        function show(){
+            appDiv.innerHTML = `
+            <input type="checkbox" ${checked} onclick=toggleColour()>Toggle colour
+            <input type="checkbox" ${checked2} onclick=toggleBorder()>Toggle border
+            <input type="checkbox" ${checked3} onclick=toggleText()>Toggle text
+            <input type="checkbox" ${checked4} onclick=toggleTextColour()>Toggle text colour
+            <input type="checkbox" ${checked5} onclick=toggleShape()>Toggle shape
+            <div id="result" style="
+            background-color: ${colour};
+            border: ${border};
+            color: ${textColour};
+            border-radius: ${shape}px"><p>${text}</p></div>
+            
+        
+            `
+        }
+        //controller
+        function toggleColour(){
+            if(colour = 'teal'){
+            colour = 'purple'
+            checked = 'checked'
+            }
+            else{
+            colour = 'teal'
+            checked = ''
+            }
+            show()
+        }
+
+        function toggleBorder(){
+            if(border = '10px solid black'){
+            border = '10px solid purple'
+            checked2 = 'checked'
+            }
+            show()
+        }
+
+        function toggleText(){
+            if(text = 'Hello!')
+            text = 'How are you?'
+            checked3 = 'checked'
+            show()
+        }
+
+        function toggleTextColour(){
+            if(textColour = 'black')
+            textColour = 'white'
+            checked4 = 'checked'
+            show()
+        }
+
+        function toggleShape(){
+            if(shape = '0')
+            shape = '200'
+            checked5 = 'checked'
+            show()
+        }
+
+
+
+        // var textInput = document.getElementById('text');
+        // var h2Element = document.getElementById('overskrift');
+
+        // function doSomethingA(clickedElement) {
+        //     textInput.style.backgroundColor = 'aquamarine';
+        //     h2Element.style.backgroundColor = 'aquamarine';
+        //     clickedElement.style.backgroundColor = 'aquamarine';
+
+        //     textInput.classList.add('round');
+        //     h2Element.classList.add('round');
+        //     clickedElement.classList.add('round');
+
+        //     textInput.value = "Trykket på knapp A";
+        // }
+
+        // function doSomethingB(clickedElement) {
+        //     textInput.style.backgroundColor = 'blue';
+        //     h2Element.style.backgroundColor = 'blue';
+        //     clickedElement.style.backgroundColor = 'blue';
+
+        //     textInput.style.color = 'whitesmoke';
+        //     h2Element.style.color = 'whitesmoke';
+        //     clickedElement.style.color = 'whitesmoke';
+
+        //     textInput.style.fontWeight = 'bolder';
+        //     h2Element.style.fontWeight = 'bolder';
+        //     clickedElement.style.fontWeight = 'bolder';
+
+
+        //     textInput.classList.remove('round');
+        //     h2Element.classList.remove('round');
+        //     clickedElement.classList.remove('round');
+
+        //     textInput.value = "Trykket på knapp B";
+        // }
+</script>
+
+</body>
+</html>
+
+<!-- Oppgave
+Du skal lage en liten applikasjon, hvor du har fem forskjellige effekter 
+(som hver har sin css-klasse). Så du fem forskjellige diver, som du skal kunne trykke på. 
+Den du trykker på blir valgt, og når du velger en effekt, skal den slås på eller 
+av for den valgte div-en. For å få til dette er det mange skritt, 
+og disse er listet opp under:
+
+Del 1) Lag fem forskjellige navngitte css-stiler som regulerer ulike ting, 
+for eksempel, border, padding, margin , background-color og color. 
+Lag en div, og gjør det sånn at når du velger en checkbox, så skrus den tilhørenden effekten på på div-en. 
+For å få til dette trenger dere funksjonen toggle, som kan brukes slik:
+<head>
+    <style>
+        .stilig {
+            background-color: blueviolet;
         }
     </style>
 </head>
 <body>
-    <p>Ferdighet 8 - Endre andre ting enn innerHTML: value, style</p>
-    <input id="text" type="text"/>
-    <h2 id="overskrift">Overskrift</h2>
-    <button onclick="doSomethingA(this)">A</button>
-    <button onclick="doSomethingB(this)">B</button>
-
+    <div id="bla">Bla bla bla</div>
+    <input id="chk" type="checkbox" onchange="toggleStyle()" />
     <script>
-        var textInput = document.getElementById('text');
-        var h2Element = document.getElementById('overskrift');
-
-        function doSomethingA(clickedElement) {
-            textInput.style.backgroundColor = 'aquamarine';
-            h2Element.style.backgroundColor = 'aquamarine';
-            clickedElement.style.backgroundColor = 'aquamarine';
-
-            textInput.classList.add('round');
-            h2Element.classList.add('round');
-            clickedElement.classList.add('round');
-
-            textInput.value = "Trykket på knapp A";
-        }
-
-        function doSomethingB(clickedElement) {
-            textInput.style.backgroundColor = 'blue';
-            h2Element.style.backgroundColor = 'blue';
-            clickedElement.style.backgroundColor = 'blue';
-
-            textInput.style.color = 'whitesmoke';
-            h2Element.style.color = 'whitesmoke';
-            clickedElement.style.color = 'whitesmoke';
-
-            textInput.style.fontWeight = 'bolder';
-            h2Element.style.fontWeight = 'bolder';
-            clickedElement.style.fontWeight = 'bolder';
-
-
-            textInput.classList.remove('round');
-            h2Element.classList.remove('round');
-            clickedElement.classList.remove('round');
-
-            textInput.value = "Trykket på knapp B";
+        function toggleStyle() {
+            var isChecked = document.getElementById('chk').checked;
+            document.getElementById('bla').classList.toggle('stilig', isChecked);
         }
     </script>
 </body>
-</html>
+
+Del 2) Når man fjerner en check, skal også effekten fjernes på div-en.
+
+Del 3) Legg til en div til. Det skal være mulig å velge en av div-ene og 
+hvilken av dem som er valgt skal vises på en måte som du velger helt selv. 
+Men om du ikke finner på noe, kan du legge til en pil før og etter ved hjelp 
+av denne css-en (som antar at du bruker "selected" som css-klasse for den som er valgt):
+
+div.selected::before {
+    content: "🡆";
+}
+
+div.selected::after {
+    content: "🡄";
+}
+Del 4) Når man endrer på checkbox-ene, så skal endringen kun gjelde den valgte div-en
+
+Del 5) Når man velger en ny div, skal checkbox-ene oppdateres ut fra hvilke 
+effekter den valgte div-en faktisk har skrudd på og av. For å få til dette, 
+trenger du funksjonen classList.contains(). Du kan styre om en checkboks skal 
+være valgt eller ikke slik:  
+document.getElementById('checkboxId').checked = selectedDiv.classList.contains('navnPåCssKlasse'); 
+-->

@@ -108,7 +108,7 @@ button:hover{
         <button onclick="answer2(this)" ${disable}>Cure Wounds</button>
         <button onclick="answer2(this)" ${disable}>Ray of Sickness</button>
         <div id="result">${result}</div>
-        <button class="${hidden} onclick="next2()">next question</button>
+        <button class="${hidden}" onclick="next2()">next question</button>
         <div id="counter" class="${hiddenC}">correct answers: ${corrects}<br>incorrect answers: ${incorrects}</div>
         `
     }
@@ -117,7 +117,7 @@ button:hover{
     function showQ3(){
         document.getElementById('app').innerHTML = `
         <h2>Question three</h2>
-        <p>Your druid has 18 wisdom. What is their WIS bonus?</p>
+        <p>Your druid's wisdom score is 18. What is their WIS bonus?</p>
         <button onclick="answer3(this)" ${disable}>8</button>
         <button onclick="answer3(this)" ${disable}>18</button><br>
         <button onclick="answer3(this)" ${disable}>2</button>

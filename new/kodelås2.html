@@ -18,16 +18,16 @@ body{
 }
 
 #safe{
-    /* background: rgb(50,50,50);
-background: linear-gradient(317deg, rgba(50,50,50,1) 0%, rgba(177,177,177,1) 100%); */
     background: rgb(50,50,50);
-    background: linear-gradient(132deg, rgba(50,50,50,1) 0%, rgba(177,177,177,1) 100%);
+    background: linear-gradient(317deg, rgba(50,50,50,1) 0%, rgba(177,177,177,1) 100%); 
+    /* background: rgb(50,50,50);
+    background: linear-gradient(132deg, rgba(50,50,50,1) 0%, rgba(177,177,177,1) 100%); */
     width:400px;
     height:500px;
     margin: auto;
     padding-top: 80px;
     box-sizing: border-box;
-    border: outset 10px rgb(94, 94, 94);
+    border: outset 10px rgb(131, 131, 131);
 }
 
 h3{
@@ -105,7 +105,7 @@ function show(){
     <button onclick="beep(this)">4</button><button onclick="beep(this)">5</button><button onclick="beep(this)">6</button><br>
     <button onclick="beep(this)">7</button><button onclick="beep(this)">8</button><button onclick="beep(this)">9</button><br>
     <button onclick="beep(this)">0</button>
-    <br><button id="open" onclick="open()"> OPEN </button> 
+    <br><button id="open" onclick="openSafe()"> OPEN </button> 
     </div>`;
 }
 
@@ -123,9 +123,11 @@ function reset(){
     show();
 }
 
-function open(){
+function openSafe(){
     pin = 'incorrect code';
+    disable = '';
     show();
+
 }
 
 </script>
